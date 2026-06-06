@@ -1,0 +1,184 @@
+{
+  "scenario": "housing_repair",
+  "scope": "Constrained phrase vocabulary for the damp and mould public-service demo. This is not general BSL translation.",
+  "entries": [
+    {
+      "phrase_id": "MY_HOME",
+      "display": "My home",
+      "tokens": ["MY_HOME"],
+      "english_hint": "This is about my home.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "REPAIR_NEEDED",
+      "display": "Repair needed",
+      "tokens": ["REPAIR", "NEEDED"],
+      "english_hint": "A repair is needed.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "DAMP_IN_HOME",
+      "display": "Damp in home",
+      "tokens": ["DAMP", "MY_HOME"],
+      "english_hint": "There is damp in my home.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "MOULD_IN_HOME",
+      "display": "Mould in home",
+      "tokens": ["MOULD", "MY_HOME"],
+      "english_hint": "There is mould in my home.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "BLACK_MOULD",
+      "display": "Black mould",
+      "tokens": ["BLACK_MOULD"],
+      "english_hint": "There is black mould.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "CHILD_ASTHMA",
+      "display": "Child asthma affected",
+      "tokens": ["CHILD", "ASTHMA"],
+      "english_hint": "A child with asthma is affected.",
+      "needs_confirmation": true,
+      "safety_note": "Health-related phrasing must be confirmed and must not be treated as diagnosis."
+    },
+    {
+      "phrase_id": "URGENT_REPAIR",
+      "display": "Urgent repair",
+      "tokens": ["REPAIR", "URGENT"],
+      "english_hint": "The repair is urgent.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "WATER_LEAK",
+      "display": "Water leak",
+      "tokens": ["WATER_LEAK"],
+      "english_hint": "There is a water leak.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "BROKEN_HEATING",
+      "display": "Broken heating",
+      "tokens": ["HEATING", "BROKEN"],
+      "english_hint": "The heating is broken.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "COLD_HOME",
+      "display": "Cold home",
+      "tokens": ["COLD", "MY_HOME"],
+      "english_hint": "My home is cold.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "BEDROOM_AFFECTED",
+      "display": "Bedroom affected",
+      "tokens": ["BEDROOM", "AFFECTED"],
+      "english_hint": "The bedroom is affected.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "BATHROOM_AFFECTED",
+      "display": "Bathroom affected",
+      "tokens": ["BATHROOM", "AFFECTED"],
+      "english_hint": "The bathroom is affected.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "KITCHEN_AFFECTED",
+      "display": "Kitchen affected",
+      "tokens": ["KITCHEN", "AFFECTED"],
+      "english_hint": "The kitchen is affected.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "WALL_WET",
+      "display": "Wet wall",
+      "tokens": ["WALL", "WET"],
+      "english_hint": "The wall is wet.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "CEILING_LEAK",
+      "display": "Ceiling leak",
+      "tokens": ["CEILING", "LEAK"],
+      "english_hint": "The ceiling is leaking.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "HEALTH_WORRIED",
+      "display": "Worried about health",
+      "tokens": ["HEALTH", "WORRIED"],
+      "english_hint": "I am worried about health effects.",
+      "needs_confirmation": true,
+      "safety_note": "Keep this as a concern statement, not a medical conclusion."
+    },
+    {
+      "phrase_id": "NEED_INSPECTION",
+      "display": "Need inspection",
+      "tokens": ["INSPECTION", "NEEDED"],
+      "english_hint": "I need an inspection.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "APPOINTMENT_REQUEST",
+      "display": "Request appointment",
+      "tokens": ["APPOINTMENT", "REQUEST"],
+      "english_hint": "Please book an appointment.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "NEED_INTERPRETER",
+      "display": "Need interpreter",
+      "tokens": ["INTERPRETER", "NEEDED"],
+      "english_hint": "I need a BSL interpreter.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "CONFIRM_IN_WRITING",
+      "display": "Confirm in writing",
+      "tokens": ["WRITING", "CONFIRM"],
+      "english_hint": "Please confirm this in writing.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "SEND_PHOTOS",
+      "display": "Send photos",
+      "tokens": ["EVIDENCE", "PHOTOS"],
+      "english_hint": "I can send photos as evidence.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "PREVIOUSLY_REPORTED",
+      "display": "Previously reported",
+      "tokens": ["REPORTED", "BEFORE"],
+      "english_hint": "I reported this before.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "NO_RESPONSE",
+      "display": "No response",
+      "tokens": ["NO_RESPONSE"],
+      "english_hint": "I have not had a response.",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "COMPLAINT_NEXT_STEP",
+      "display": "Complaint next step",
+      "tokens": ["COMPLAINT", "NEXT_STEP"],
+      "english_hint": "What is the next step for a complaint?",
+      "needs_confirmation": true
+    },
+    {
+      "phrase_id": "THANK_YOU",
+      "display": "Thank you",
+      "tokens": ["THANK_YOU"],
+      "english_hint": "Thank you.",
+      "needs_confirmation": false
+    }
+  ]
+}
+

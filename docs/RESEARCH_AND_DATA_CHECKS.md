@@ -24,6 +24,15 @@ This file records the current external assumptions that should guide implementat
 
 Implication: ElevenLabs on-device must be treated as a day-one activation/discovery item. If the official activation path is not available, use local ASR/TTS fallback for the offline proof.
 
+## Confirmed Runtime Activation Points
+
+- NVIDIA's DGX Spark materials include official playbooks for local network access, dashboard access, NIM on Spark, Ollama-based local model use, and llama.cpp with CUDA.
+- NVIDIA's NIM LLM documentation exposes OpenAI-style `/v1/models` and completion endpoints after the container starts.
+- NVIDIA's DGX Spark llama.cpp playbook builds with CUDA for GB10 and serves an OpenAI-compatible endpoint through `llama-server`.
+- Ollama's docs include Linux installation, GPU discovery notes, and OpenAI compatibility; NVIDIA's Spark playbooks include Ollama-based local workflows.
+
+Implication: runtime discovery should prove the official provider path first, then expose a local OpenAI-compatible endpoint for Signbridge. Do not change event contracts for provider-specific quirks.
+
 ## Confirmed Open Data and Policy Points
 
 - London Datastore is a Greater London Authority open data-sharing portal with over a thousand datasets for London.
@@ -37,6 +46,12 @@ Implication: ElevenLabs on-device must be treated as a day-one activation/discov
 - NVIDIA Hack for Impact London context: https://www.nvidia.com/en-gb/events/london-tech-week/
 - NVIDIA DGX Spark: https://www.nvidia.com/en-us/products/workstations/dgx-spark/
 - NVIDIA DGX Spark llama.cpp playbook: https://build.nvidia.com/spark/llama-cpp
+- NVIDIA DGX Spark NIM playbook: https://build.nvidia.com/spark/nim-llm
+- NVIDIA DGX Spark local network access: https://build.nvidia.com/spark/connect-to-your-spark/overview
+- NVIDIA NIM LLM getting started: https://docs.nvidia.com/nim/large-language-models/1.5.0/getting-started.html
+- Ollama Linux docs: https://docs.ollama.com/linux
+- Ollama GPU docs: https://docs.ollama.com/gpu
+- Ollama OpenAI compatibility: https://docs.ollama.com/openai
 - HP ZGX Nano G1n specs: https://support.hp.com/us-en/document/ish_13212147-13212192-16
 - GOV.UK BSL Report 2022: https://www.gov.uk/government/publications/the-british-sign-language-bsl-report-2022/the-british-sign-language-bsl-report-2022
 - ElevenLabs models: https://elevenlabs.io/docs/models
@@ -45,4 +60,3 @@ Implication: ElevenLabs on-device must be treated as a day-one activation/discov
 - London Datastore: https://data.london.gov.uk/
 - City of London Damp and Mould Policy PDF: https://democracy.cityoflondon.gov.uk/documents/s211746/Damp%20and%20Mould%20Policy%20-%20appendix%204.pdf
 - City of London regulatory judgement, 25 February 2026: https://www.gov.uk/government/publications/city-of-london-corporation/city-of-london-corporation-00aa-regulatory-judgement-25-february-2026
-

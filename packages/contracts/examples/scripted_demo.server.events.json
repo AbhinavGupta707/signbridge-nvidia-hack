@@ -1,0 +1,191 @@
+[
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "orchestrator",
+    "status": "ready",
+    "detail": "mock WebSocket event bus"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "recognition",
+    "status": "mock_ready",
+    "detail": "scripted constrained-vocabulary recogniser"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "translation",
+    "status": "mock_ready",
+    "detail": "deterministic gloss-to-English templates"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "tts",
+    "status": "mock_ready",
+    "detail": "placeholder audio envelope, no voice provider"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "captions",
+    "status": "mock_ready",
+    "detail": "scripted professional captions"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "policy",
+    "status": "mock_ready",
+    "detail": "placeholder policy card, no RAG"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "question",
+    "status": "mock_ready",
+    "detail": "scripted question prompt"
+  },
+  {
+    "type": "system.status",
+    "t_ms": 0,
+    "component": "record",
+    "status": "mock_ready",
+    "detail": "in-memory mock record"
+  },
+  {
+    "type": "recognition.partial",
+    "session_id": "demo-001",
+    "utterance_id": "u-1",
+    "t_ms": 900,
+    "tokens": ["MY_HOME", "DAMP"],
+    "confidence": 0.76
+  },
+  {
+    "type": "recognition.final",
+    "session_id": "demo-001",
+    "utterance_id": "u-1",
+    "t_ms": 1300,
+    "tokens": ["MY_HOME", "DAMP", "CHILD_ASTHMA"],
+    "confidence": 0.84
+  },
+  {
+    "type": "translation.final",
+    "session_id": "demo-001",
+    "utterance_id": "u-1",
+    "t_ms": 1450,
+    "text": "There is damp in my home and it is affecting my child's asthma.",
+    "confidence": 0.84
+  },
+  {
+    "type": "tts.audio",
+    "session_id": "demo-001",
+    "utterance_id": "u-1",
+    "t_ms": 1700,
+    "format": "wav",
+    "data_b64": "U0lHTkJSSURHRV9NT0NLX0FVRElP"
+  },
+  {
+    "type": "caption.partial",
+    "session_id": "demo-001",
+    "t_ms": 2400,
+    "speaker": "professional",
+    "text": "I can book an inspection for..."
+  },
+  {
+    "type": "caption.final",
+    "session_id": "demo-001",
+    "t_ms": 3100,
+    "speaker": "professional",
+    "text": "I can book an inspection for damp and mould and send the appointment details in writing."
+  },
+  {
+    "type": "policy.card",
+    "session_id": "demo-001",
+    "t_ms": 3500,
+    "id": "p-1",
+    "title": "Housing repair next step",
+    "claim": "Mock policy card: ask for an inspection timescale and written confirmation for damp and mould concerns.",
+    "source_title": "Mock source placeholder - replace in advocacy branch",
+    "source_url": "mock://policy/housing-repair",
+    "quote": "Mock quote for wiring only. The advocacy branch must replace this with a source-backed citation."
+  },
+  {
+    "type": "question.prompt",
+    "session_id": "demo-001",
+    "t_ms": 3800,
+    "id": "q-1",
+    "text": "Ask when the repair inspection will happen and how it will be confirmed in writing."
+  },
+  {
+    "type": "record.updated",
+    "session_id": "demo-001",
+    "t_ms": 3900,
+    "item_count": 4
+  },
+  {
+    "type": "recognition.partial",
+    "session_id": "demo-001",
+    "utterance_id": "u-2",
+    "t_ms": 4700,
+    "tokens": ["INTERPRETER", "APPOINTMENT"],
+    "confidence": 0.78
+  },
+  {
+    "type": "recognition.final",
+    "session_id": "demo-001",
+    "utterance_id": "u-2",
+    "t_ms": 5100,
+    "tokens": ["INTERPRETER", "APPOINTMENT", "WRITING"],
+    "confidence": 0.86
+  },
+  {
+    "type": "translation.final",
+    "session_id": "demo-001",
+    "utterance_id": "u-2",
+    "t_ms": 5250,
+    "text": "Please arrange a BSL interpreter for the next appointment and confirm it in writing.",
+    "confidence": 0.86
+  },
+  {
+    "type": "tts.audio",
+    "session_id": "demo-001",
+    "utterance_id": "u-2",
+    "t_ms": 5500,
+    "format": "wav",
+    "data_b64": "U0lHTkJSSURHRV9NT0NLX0FVRElP"
+  },
+  {
+    "type": "policy.card",
+    "session_id": "demo-001",
+    "t_ms": 6100,
+    "id": "p-2",
+    "title": "Accessible communication",
+    "claim": "Mock policy card: record the request for accessible communication support and confirm the follow-up route.",
+    "source_title": "Mock source placeholder - replace in advocacy branch",
+    "source_url": "mock://policy/accessible-communication",
+    "quote": "Mock quote for wiring only. The advocacy branch must replace this with a source-backed citation."
+  },
+  {
+    "type": "question.prompt",
+    "session_id": "demo-001",
+    "t_ms": 6350,
+    "id": "q-2",
+    "text": "Ask who is responsible for booking the interpreter and when you will receive confirmation."
+  },
+  {
+    "type": "record.updated",
+    "session_id": "demo-001",
+    "t_ms": 6500,
+    "item_count": 8
+  },
+  {
+    "type": "record.exported",
+    "session_id": "demo-001",
+    "t_ms": 6900,
+    "format": "html",
+    "export_url": "/mock/records/demo-001.html"
+  }
+]

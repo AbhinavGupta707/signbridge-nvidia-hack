@@ -10,6 +10,14 @@ These are not blockers for scaffolding. They are the questions to answer before 
 
 - ElevenLabs on-device access is not guaranteed by public docs. It needs official event/sponsor activation.
 - If unavailable, the demo should use local fallback ASR/TTS for the offline proof and can optionally show API-backed ElevenLabs in a separate sponsor-quality mode.
+- A public ElevenLabs API key should be labelled `api_only`, not on-device/private activation.
+
+## Runtime Activation
+
+- NIM requires NGC account/key, NIM entitlement, Docker, and NVIDIA Container Toolkit before runtime debugging is useful.
+- Ollama requires official install/discovery and a downloaded local model before GPU troubleshooting is useful.
+- llama.cpp requires source checkout/build artifacts and a local GGUF before CUDA/runtime tuning is useful.
+- Any offline proof path that still needs public internet is blocked until a local/on-device fallback is selected.
 
 ## Data Specificity
 
@@ -28,4 +36,3 @@ These are not blockers for scaffolding. They are the questions to answer before 
 - Raw video should not be retained.
 - Records should be consent-gated.
 - A production deployment requires DPIA, retention policy, audit model, and public-body governance.
-

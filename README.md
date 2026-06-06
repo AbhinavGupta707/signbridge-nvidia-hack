@@ -12,12 +12,69 @@ See:
 - [Kickoff guide](docs/KICKOFF.md)
 - [Research and data checks](docs/RESEARCH_AND_DATA_CHECKS.md)
 - [Open flags](docs/OPEN_FLAGS.md)
+- [Runtime checklist](docs/runtime/DGX_SPARK_ZGX_NANO_CHECKLIST.md)
+- [Offline proof runbook](demo/OFFLINE_PROOF.md)
 
 ## Current Status
 
-This repo starts with architecture and coordination scaffolding only. Implementation agents should work in feature branches and must respect the shared event contracts before building deeper modules.
+This repo now has the initial integration scaffold on `agent/integration-scaffold`:
+
+- shared event contracts in `packages/contracts`
+- mock FastAPI orchestrator in `services/orchestrator`
+- `/health`, `/mock/events`, `/mock/records/{session_id}.html`, and `/ws`
+- deterministic mock providers for recognition, translation, TTS, captions, policy cards, question prompts, and record updates
+
+Implementation agents should work in feature branches and must respect the shared event contracts before building deeper modules.
+
+## Local Dev
+
+Install Python dependencies if your environment does not already have them:
+
+```bash
+python3 -m pip install -r services/orchestrator/requirements.txt
+```
+
+Validate the shared contracts and sample events:
+
+```bash
+make validate-contracts
+```
+
+Run the mock orchestrator:
+
+```bash
+make dev
+```
+
+Then, in another terminal:
+
+```bash
+make health
+make replay-smoke
+```
+
+Useful local endpoints:
+
+- `GET http://127.0.0.1:8000/health`
+- `GET http://127.0.0.1:8000/mock/events`
+- `WS ws://127.0.0.1:8000/ws`
+
+To auto-stream the scripted demo for a frontend, connect to:
+
+```text
+ws://127.0.0.1:8000/ws?replay=scripted
+```
+
+Or send this event after connecting:
+
+```json
+{"type":"demo.replay","session_id":"demo-001","scenario":"housing_repair"}
+```
 
 ## First Build Principle
 
 Do architecture first, then quality. No shortcuts that undermine privacy, source-backed policy claims, demo reliability, or the ethical position that Signbridge augments but does not replace qualified interpreters.
 
+## Runtime Activation
+
+Hardware/runtime work lives under `infra/**`, `docs/runtime/**`, and `demo/OFFLINE_PROOF.md`. If NVIDIA, ElevenLabs, or another provider capability is missing, check registration, official activation, discovery, and install state before debugging permissions or app code.

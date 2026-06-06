@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Signbridge live constrained public-service interpreter demo interface."
+    />
+    <title>Signbridge Live Session</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#session-workspace">Skip to live session</a>
+
+    <main class="app-shell" id="app">
+      <header class="topbar" aria-labelledby="session-title">
+        <div class="session-heading">
+          <p class="eyebrow">Signbridge live session</p>
+          <h1 id="session-title">Housing repair appointment</h1>
+          <p class="session-meta">
+            Session <strong id="session-id">demo-001</strong>
+            <span aria-hidden="true">/</span>
+            constrained public-service vocabulary
+          </p>
+        </div>
+
+        <div class="top-status" aria-label="Connection status">
+          <span class="status-pill" id="connection-pill">Connecting to mock WebSocket</span>
+          <span class="status-pill status-pill--warning" id="offline-pill">Offline proof pending</span>
+        </div>
+      </header>
+
+      <section class="limitation-banner" aria-label="Interpreter limitation">
+        <strong>Constrained demo.</strong>
+        Signbridge is not a certified interpreter and does not claim general BSL translation.
+      </section>
+
+      <section class="session-toolbar" aria-label="Session controls">
+        <div class="toolbar-group">
+          <button class="button button--primary" id="start-session-button" type="button">
+            Start session
+          </button>
+          <button class="button" id="replay-button" type="button">
+            Replay mock flow
+          </button>
+          <button class="button" id="reconnect-button" type="button">
+            Reconnect
+          </button>
+        </div>
+
+        <div class="toolbar-group toolbar-group--right">
+          <label class="toggle">
+            <input id="record-consent-toggle" type="checkbox" checked />
+            <span>Record consent</span>
+          </label>
+          <button class="button" id="export-button" type="button">
+            Export record
+          </button>
+        </div>
+      </section>
+
+      <section class="workspace-grid" id="session-workspace">
+        <section class="panel media-panel" aria-labelledby="media-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Input</p>
+              <h2 id="media-title">Camera and microphone</h2>
+            </div>
+            <span class="mini-pill" id="media-mode">Mock-ready</span>
+          </div>
+
+          <div class="video-shell" aria-label="Camera preview">
+            <video id="camera-preview" playsinline muted></video>
+            <div class="camera-placeholder" id="camera-placeholder">
+              <span class="placeholder-mark" aria-hidden="true"></span>
+              <strong>Camera permission not requested</strong>
+              <span>Mock landmarks can run while the real camera is unavailable.</span>
+            </div>
+          </div>
+
+          <div class="permission-list" aria-label="Permission states">
+            <div class="permission-row">
+              <div>
+                <strong id="camera-state-label">Camera: not requested</strong>
+                <span id="camera-state-detail">Landmark capture is waiting.</span>
+              </div>
+              <button class="button button--small" id="camera-button" type="button">
+                Enable camera
+              </button>
+            </div>
+
+            <div class="permission-row">
+              <div>
+                <strong id="mic-state-label">Microphone: not requested</strong>
+                <span id="mic-state-detail">Caption capture is waiting.</span>
+              </div>
+              <button class="button button--small" id="mic-button" type="button">
+                Enable mic
+              </button>
+            </div>
+          </div>
+
+          <div class="quick-actions" aria-label="Mock input controls">
+            <button class="button" id="mock-sign-button" type="button">
+              Send mock sign
+            </button>
+            <button class="button" id="mock-speech-button" type="button">
+              Send mock speech
+            </button>
+          </div>
+        </section>
+
+        <section class="panel conversation-panel" aria-labelledby="conversation-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Interpreter loop</p>
+              <h2 id="conversation-title">Live exchange</h2>
+            </div>
+            <span class="mini-pill" id="record-count">0 record items</span>
+          </div>
+
+          <section class="caption-area" aria-labelledby="captions-title">
+            <div class="section-heading">
+              <h3 id="captions-title">Live captions for Deaf user</h3>
+              <span id="caption-state">Waiting for professional speech</span>
+            </div>
+            <div class="caption-live" id="caption-live" aria-live="polite">
+              <span>No live caption yet.</span>
+            </div>
+            <ol class="caption-history" id="caption-history" aria-label="Final caption history"></ol>
+          </section>
+
+          <section class="meaning-area" aria-labelledby="meaning-title">
+            <div class="section-heading">
+              <h3 id="meaning-title">Recognised signed meaning</h3>
+              <span id="recognition-state">Waiting for signed phrase</span>
+            </div>
+
+            <div class="recognition-box">
+              <div>
+                <span class="field-label">Gloss tokens</span>
+                <div class="token-row" id="token-row" aria-live="polite">
+                  <span class="empty-state">No tokens yet</span>
+                </div>
+              </div>
+
+              <div>
+                <span class="field-label">Confidence</span>
+                <div class="confidence-meter" aria-label="Recognition confidence">
+                  <span id="confidence-bar"></span>
+                </div>
+                <span class="confidence-label" id="confidence-label">0%</span>
+              </div>
+            </div>
+
+            <div class="translation-card" id="translation-card" aria-live="polite">
+              <span class="empty-state">No signed meaning recognised yet.</span>
+            </div>
+
+            <div class="confirmation-card" aria-labelledby="confirmation-title">
+              <h3 id="confirmation-title">Confirmation</h3>
+              <p id="confirmation-summary">Waiting for a recognised signed meaning.</p>
+              <div class="confirmation-actions">
+                <button class="button button--primary" id="confirm-button" type="button" disabled>
+                  Confirm meaning
+                </button>
+                <button class="button" id="correction-button" type="button" disabled>
+                  Needs correction
+                </button>
+              </div>
+              <div class="correction-panel" id="correction-panel" hidden>
+                <label for="correction-text">Corrected wording</label>
+                <textarea
+                  id="correction-text"
+                  rows="3"
+                  placeholder="Type the corrected sentence for the record."
+                ></textarea>
+                <button class="button" id="send-correction-button" type="button">
+                  Send correction
+                </button>
+              </div>
+            </div>
+
+            <div class="spoken-status" aria-live="polite">
+              <span class="status-dot" id="spoken-dot"></span>
+              <div>
+                <strong id="spoken-title">Spoken output waiting</strong>
+                <span id="spoken-detail">A confirmed signed meaning will be spoken for the hearing professional.</span>
+              </div>
+              <button class="button button--small" id="replay-speech-button" type="button" disabled>
+                Replay output
+              </button>
+            </div>
+          </section>
+        </section>
+
+        <aside class="assist-column" aria-label="Policy, prompts, and providers">
+          <section class="panel assist-panel" aria-labelledby="policy-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Policy agent</p>
+                <h2 id="policy-title">Policy cards</h2>
+              </div>
+              <span class="mini-pill" id="policy-count">0 cards</span>
+            </div>
+            <div class="policy-list" id="policy-list">
+              <p class="empty-state">No policy card surfaced yet.</p>
+            </div>
+          </section>
+
+          <section class="panel assist-panel" aria-labelledby="question-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Question agent</p>
+                <h2 id="question-title">Question prompts</h2>
+              </div>
+              <span class="mini-pill" id="question-count">0 prompts</span>
+            </div>
+            <div class="question-list" id="question-list">
+              <p class="empty-state">No prompt yet.</p>
+            </div>
+          </section>
+
+          <section class="panel assist-panel" aria-labelledby="provider-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Providers</p>
+                <h2 id="provider-title">Offline and mock status</h2>
+              </div>
+            </div>
+            <div class="provider-grid" id="provider-grid" aria-live="polite"></div>
+            <div class="export-link" id="export-link"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="activity-panel" aria-label="Agent activity strip">
+        <div class="activity-heading">
+          <h2>Agent activity</h2>
+          <span id="last-event">No event received</span>
+        </div>
+        <div class="agent-strip" id="agent-strip"></div>
+      </section>
+    </main>
+
+    <noscript>
+      <p class="noscript">Signbridge needs JavaScript to run the live demo interface.</p>
+    </noscript>
+  </body>
+</html>

@@ -16,8 +16,10 @@ coverage/
 
 # Local data and generated artifacts
 data/raw/
-data/sign_clips/
-data/landmarks/
+data/sign_clips/*
+!data/sign_clips/README.md
+data/landmarks/*
+!data/landmarks/README.md
 data/indexes/
 demo/clips/
 demo/exports/
@@ -34,4 +36,3 @@ demo/exports/
 !.env.example
 *.log
 .DS_Store
-

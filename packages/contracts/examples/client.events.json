@@ -1,0 +1,39 @@
+[
+  {
+    "type": "session.start",
+    "session_id": "demo-001",
+    "scenario": "housing_repair",
+    "consent_record": true
+  },
+  {
+    "type": "landmark.frame",
+    "session_id": "demo-001",
+    "t_ms": 1200,
+    "landmarks_version": "mediapipe_holistic_v1",
+    "points": []
+  },
+  {
+    "type": "audio.chunk",
+    "session_id": "demo-001",
+    "t_ms": 4200,
+    "format": "pcm16",
+    "sample_rate": 16000,
+    "data_b64": "U0lHTkJSSURHRV9NT0NLX0FVRElP"
+  },
+  {
+    "type": "user.confirmation",
+    "utterance_id": "u-1",
+    "accepted": true,
+    "correction_text": null
+  },
+  {
+    "type": "record.export",
+    "session_id": "demo-001",
+    "format": "html"
+  },
+  {
+    "type": "demo.replay",
+    "session_id": "demo-001",
+    "scenario": "housing_repair"
+  }
+]

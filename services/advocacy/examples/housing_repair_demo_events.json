@@ -1,0 +1,386 @@
+[
+  {
+    "type": "session.start",
+    "session_id": "demo-housing-001",
+    "scenario": "housing_repair_damp_mould",
+    "consent_record": true
+  },
+  {
+    "type": "translation.final",
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001",
+    "text": "There is damp and mould in my child's bedroom. My child has asthma and their breathing is getting worse. I am Deaf and need BSL or written updates.",
+    "confidence": 0.86,
+    "t_ms": 18400
+  },
+  {
+    "type": "caption.final",
+    "session_id": "demo-housing-001",
+    "utterance_id": "c-001",
+    "speaker": "professional",
+    "text": "I can arrange an inspection. Please send photos and I will log the vulnerability and repair request today.",
+    "confidence": 0.91,
+    "t_ms": 26100
+  },
+  {
+    "type": "policy.card",
+    "id": "p-emergency-child-asthma",
+    "title": "Child asthma can make damp and mould urgent",
+    "claim": "Because the report mentions damp or mould affecting a child with asthma, GOV.UK landlord guidance gives a similar example as a potential emergency hazard, and the City policy says household vulnerability is part of damp and mould triage.",
+    "source_title": "Awaab's Law: Guidance for social landlords - Timeframes for repairs in the social rented sector",
+    "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector",
+    "quote": "child's asthma has been affected",
+    "citations": [
+      {
+        "source_id": "govuk-awaabs-law-landlords",
+        "source_title": "Awaab's Law: Guidance for social landlords - Timeframes for repairs in the social rented sector",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector",
+        "quote": "child's asthma has been affected",
+        "locator": "Emergency damp and mould hazard examples",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "household composition",
+        "locator": "Policy Approach 6.1",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "asthma, COPD",
+        "locator": "Policy Approach 6.5",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "housing_repair",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "policy.card",
+    "id": "p-awaabs-law-timeframes",
+    "title": "Awaab's Law sets social-housing hazard deadlines",
+    "claim": "For covered social housing tenancies, Awaab's Law guidance says emergency hazards must be made safe within 24 hours, and significant damp and mould hazards must be investigated within 10 working days and made safe within 5 working days after investigation.",
+    "source_title": "Awaab's Law: Guidance for tenants in social housing",
+    "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+    "quote": "emergency repairs must be done within 24 hours",
+    "citations": [
+      {
+        "source_id": "govuk-awaabs-law-tenants",
+        "source_title": "Awaab's Law: Guidance for tenants in social housing",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+        "quote": "emergency repairs must be done within 24 hours",
+        "locator": "Quick guide to Awaab's Law",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "govuk-awaabs-law-tenants",
+        "source_title": "Awaab's Law: Guidance for tenants in social housing",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+        "quote": "written summary",
+        "locator": "What does Awaab's Law include",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "housing_repair",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "policy.card",
+    "id": "p-city-report-details",
+    "title": "Report location, extent, and vulnerability",
+    "claim": "City of London Housing asks City-managed residents to report damp and mould immediately and include the location, extent, and whether anyone in the household is vulnerable.",
+    "source_title": "Preventing damp and mould",
+    "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+    "quote": "report it to us immediately",
+    "citations": [
+      {
+        "source_id": "col-damp-mould-web",
+        "source_title": "Preventing damp and mould",
+        "publisher": "City of London Corporation",
+        "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+        "quote": "report it to us immediately",
+        "locator": "Report damp and mould",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "housing_repair",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "policy.card",
+    "id": "p-city-response-aims",
+    "title": "City response aims for damp, mould, and leaks",
+    "claim": "City of London Housing publishes target response windows: damp and mould inspections within 10 working days, standard mould treatment within 10 working days, severe mould treatment within 24 hours, and severe uncontainable leak emergency repair within 24 hours.",
+    "source_title": "Preventing damp and mould",
+    "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+    "quote": "inspections within 10 working days",
+    "citations": [
+      {
+        "source_id": "col-damp-mould-web",
+        "source_title": "Preventing damp and mould",
+        "publisher": "City of London Corporation",
+        "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+        "quote": "inspections within 10 working days",
+        "locator": "Our approach to damp and mould",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "emergency repairs within 24 hours",
+        "locator": "Policy Approach 6.2",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "housing_repair",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "policy.card",
+    "id": "p-accessible-communication",
+    "title": "Accessible communication can include interpretation or transcription",
+    "claim": "The City damp and mould policy says customers with distinct communication needs should not be unreasonably or disproportionately affected, and appropriate arrangements may include interpretation or transcription.",
+    "source_title": "Damp, Mould & Condensation Policy",
+    "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+    "quote": "interpretation or transcription",
+    "citations": [
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "interpretation or transcription",
+        "locator": "Equalities",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "accessible_communication",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "policy.card",
+    "id": "p-records-and-follow-up",
+    "title": "Keep evidence and ask for follow-up",
+    "claim": "The City damp and mould page advises residents to keep photos and reporting dates; the City policy says damp and mould instances and actions are recorded, and severe cases aim for a six-month revisit.",
+    "source_title": "Preventing damp and mould",
+    "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+    "quote": "Take photos and note the date",
+    "citations": [
+      {
+        "source_id": "col-damp-mould-web",
+        "source_title": "Preventing damp and mould",
+        "publisher": "City of London Corporation",
+        "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+        "quote": "Take photos and note the date",
+        "locator": "If you notice signs of damp or mould",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "revisit the property after six months",
+        "locator": "Policy Approach 6.6 and 6.12",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "policy_domain": "housing_repair",
+    "verified": true,
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "question.prompt",
+    "id": "q-emergency-child-asthma",
+    "text": "Ask whether this is being treated as an emergency hazard because damp or mould is affecting your child's asthma, and when someone will attend.",
+    "policy_card_ids": [
+      "p-emergency-child-asthma"
+    ],
+    "citations": [
+      {
+        "source_id": "govuk-awaabs-law-landlords",
+        "source_title": "Awaab's Law: Guidance for social landlords - Timeframes for repairs in the social rented sector",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector",
+        "quote": "child's asthma has been affected",
+        "locator": "Emergency damp and mould hazard examples",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "household composition",
+        "locator": "Policy Approach 6.1",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "asthma, COPD",
+        "locator": "Policy Approach 6.5",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "question.prompt",
+    "id": "q-awaabs-law-timeframes",
+    "text": "Ask the officer to confirm whether Awaab's Law applies to your tenancy, and to give the investigation, make-safe, written-summary, and follow-up-work dates in writing.",
+    "policy_card_ids": [
+      "p-awaabs-law-timeframes"
+    ],
+    "citations": [
+      {
+        "source_id": "govuk-awaabs-law-tenants",
+        "source_title": "Awaab's Law: Guidance for tenants in social housing",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+        "quote": "emergency repairs must be done within 24 hours",
+        "locator": "Quick guide to Awaab's Law",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "govuk-awaabs-law-tenants",
+        "source_title": "Awaab's Law: Guidance for tenants in social housing",
+        "publisher": "UK Government",
+        "source_url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+        "quote": "written summary",
+        "locator": "What does Awaab's Law include",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "question.prompt",
+    "id": "q-city-report-details",
+    "text": "Ask for the report reference number and confirm that the location, extent, and household vulnerability details have been logged.",
+    "policy_card_ids": [
+      "p-city-report-details"
+    ],
+    "citations": [
+      {
+        "source_id": "col-damp-mould-web",
+        "source_title": "Preventing damp and mould",
+        "publisher": "City of London Corporation",
+        "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+        "quote": "report it to us immediately",
+        "locator": "Report damp and mould",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "question.prompt",
+    "id": "q-city-response-aims",
+    "text": "Ask what risk category has been assigned and the date of the inspection or repair appointment.",
+    "policy_card_ids": [
+      "p-city-response-aims"
+    ],
+    "citations": [
+      {
+        "source_id": "col-damp-mould-web",
+        "source_title": "Preventing damp and mould",
+        "publisher": "City of London Corporation",
+        "source_url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+        "quote": "inspections within 10 working days",
+        "locator": "Our approach to damp and mould",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      },
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "emergency repairs within 24 hours",
+        "locator": "Policy Approach 6.2",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "question.prompt",
+    "id": "q-accessible-communication",
+    "text": "Ask for all repair appointments, updates, and complaint responses to be provided in writing or with BSL/interpreting or transcription support.",
+    "policy_card_ids": [
+      "p-accessible-communication"
+    ],
+    "citations": [
+      {
+        "source_id": "col-damp-mould-policy",
+        "source_title": "Damp, Mould & Condensation Policy",
+        "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+        "source_url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+        "quote": "interpretation or transcription",
+        "locator": "Equalities",
+        "verified": true,
+        "verified_on": "2026-06-06"
+      }
+    ],
+    "session_id": "demo-housing-001",
+    "utterance_id": "u-001"
+  },
+  {
+    "type": "record.updated",
+    "session_id": "demo-housing-001",
+    "item_count": 14
+  },
+  {
+    "type": "record.exported",
+    "session_id": "demo-housing-001",
+    "format": "json",
+    "export_url": "local://housing_repair_record.json"
+  }
+]

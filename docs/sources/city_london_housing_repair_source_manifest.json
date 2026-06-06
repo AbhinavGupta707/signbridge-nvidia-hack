@@ -1,0 +1,230 @@
+{
+  "manifest_id": "signbridge-city-london-housing-repair-v1",
+  "scenario": "housing_repair_damp_mould",
+  "last_verified": "2026-06-06",
+  "verification_method": "Manual review of primary City of London, London Datastore, ONS, GOV.UK, and regulator web/PDF sources.",
+  "data_boundary": "This manifest backs the local demo corpus for City of London managed housing damp and mould appointments. London-wide open datasets are included as context and deployment evidence, not as individual entitlement sources.",
+  "sources": [
+    {
+      "source_id": "col-damp-mould-web",
+      "title": "Preventing damp and mould",
+      "publisher": "City of London Corporation",
+      "url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/preventing-damp-and-mould",
+      "source_type": "web_page",
+      "jurisdiction": "City of London Corporation Housing",
+      "role": ["policy", "service_contact", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "verified_points": [
+        "Residents are asked to report damp and mould immediately and include location, extent, and household vulnerability details.",
+        "The page gives the Property Services phone number and online reporting route.",
+        "The page describes target windows for damp/mould inspections, mould treatments, leak investigations, and emergency action.",
+        "The page advises residents to keep photos and dates as records."
+      ],
+      "source_locator": "Report damp and mould; Our approach to damp and mould; October 2025: Awaab's Law",
+      "notes": "City wording describes several response windows as aims. Cards must label them as target/aim windows, not guaranteed legal outcomes."
+    },
+    {
+      "source_id": "col-damp-mould-policy",
+      "title": "Damp, Mould & Condensation Policy",
+      "publisher": "City of London Corporation, Department of Community & Children's Services, Housing Division",
+      "url": "https://www.cityoflondon.gov.uk/assets/Services-DCCS/damp-mould-condensation-policy.pdf",
+      "source_type": "pdf_policy",
+      "jurisdiction": "City of London Corporation Housing",
+      "role": ["policy", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "version": "Version 2, re-approved 21 October 2025",
+      "verified_points": [
+        "The policy scope includes HRA managed homes and named almshouse trusts.",
+        "The policy aims to keep homes dry, safe, and free from damp/mould hazards.",
+        "The policy says residents reporting damp and mould should be treated with empathy and respect and the cause should not be prejudged.",
+        "Risk assessment considers severity, location, household composition, and vulnerability.",
+        "The policy includes high-risk and medium/low-risk response aims.",
+        "The policy addresses temporary accommodation, follow-up, records, compensation, and accessible communication needs."
+      ],
+      "source_locator": "Purpose; Aims; Policy Approach; Equalities",
+      "notes": "Use this as the principal local policy authority for City of London managed housing."
+    },
+    {
+      "source_id": "col-housing-complaints",
+      "title": "Housing complaints and customer feedback",
+      "publisher": "City of London Corporation",
+      "url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/housing-services/housing-complaints-and-customer-feedback",
+      "source_type": "web_page",
+      "jurisdiction": "City of London Corporation Housing",
+      "role": ["policy", "complaints_route", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "verified_points": [
+        "The page tells residents to report a first issue before using the formal complaint route.",
+        "The page lists information needed for a complaint.",
+        "The page defines a complaint and gives examples including failure to meet service standards or unfair treatment.",
+        "The page says residents can contact the Housing Ombudsman Service at any stage of a complaint."
+      ],
+      "source_locator": "Complaints; Information you need to provide; The Housing Ombudsman",
+      "notes": "Complaint handling timescales are not encoded here; use the linked policy/PDF if exact stage windows are needed."
+    },
+    {
+      "source_id": "govuk-awaabs-law-tenants",
+      "title": "Awaab's Law: Guidance for tenants in social housing",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-tenants-in-social-housing/awaabs-law-guidance-for-tenants-in-social-housing",
+      "source_type": "statutory_guidance_web",
+      "jurisdiction": "England social housing",
+      "role": ["legal_context", "policy", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "verified_points": [
+        "Awaab's Law applies to most social housing tenants.",
+        "Emergency hazards must be investigated and made safe within 24 hours.",
+        "Significant damp and mould hazards must be investigated within 10 working days and made safe within 5 working days after investigation.",
+        "Landlords must provide a written summary after investigation and offer suitable alternative accommodation if the home cannot be made safe in time."
+      ],
+      "source_locator": "Quick guide; What does Awaab's Law include; Step by Step Guides",
+      "notes": "Coverage depends on tenancy/licence status. The demo must ask the resident or officer to confirm coverage."
+    },
+    {
+      "source_id": "govuk-awaabs-law-landlords",
+      "title": "Awaab's Law: Guidance for social landlords - Timeframes for repairs in the social rented sector",
+      "publisher": "UK Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector",
+      "source_type": "statutory_guidance_web",
+      "jurisdiction": "England social housing",
+      "role": ["legal_context", "policy", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "verified_points": [
+        "The landlord guidance includes damp and mould examples involving vulnerable residents.",
+        "The guidance gives an example where damp and mould affecting a child's asthma would likely be an emergency hazard.",
+        "The guidance states emergency damp and mould action may require attendance within 24 hours."
+      ],
+      "source_locator": "Emergency damp and mould hazard examples",
+      "notes": "Use for the child-asthma demo because it is directly aligned with the scripted scenario."
+    },
+    {
+      "source_id": "rsh-col-judgement-2026",
+      "title": "City of London Corporation (00AA) - Regulatory Judgement: 25 February 2026",
+      "publisher": "Regulator of Social Housing via GOV.UK",
+      "url": "https://www.gov.uk/government/publications/city-of-london-corporation/city-of-london-corporation-00aa-regulatory-judgement-25-february-2026",
+      "source_type": "regulatory_judgement_web",
+      "jurisdiction": "City of London Corporation social housing",
+      "role": ["regulatory_context", "demo_corpus"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": true,
+      "confidence": "high",
+      "verified_points": [
+        "The regulator says City of London Corporation owns and manages around 1,900 social housing homes.",
+        "The judgement identifies serious failings in outcomes relating to repairs, maintenance, and planned improvements.",
+        "The judgement notes ongoing engagement and monitoring by the regulator."
+      ],
+      "source_locator": "Regulatory judgement; Background to the judgement",
+      "notes": "This source provides risk/context. It should not be used to state an individual resident entitlement."
+    },
+    {
+      "source_id": "col-tenant-satisfaction-measures",
+      "title": "Tenant Satisfaction Measures",
+      "publisher": "City of London Corporation",
+      "url": "https://www.cityoflondon.gov.uk/services/housing-and-homelessness/resident-involvement/tenant-satisfaction-measures",
+      "source_type": "performance_data_web",
+      "jurisdiction": "City of London Corporation Housing",
+      "role": ["open_data_context", "performance_context"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": false,
+      "confidence": "medium",
+      "verified_points": [
+        "The page reports 2024-2025 tenant satisfaction and landlord performance measures.",
+        "The page reports homes not meeting the Decent Homes Standard and emergency/non-emergency responsive repair completion within target timescales.",
+        "The page says the figures are gathered through tenant surveys and management information."
+      ],
+      "source_locator": "Tenant Satisfaction Measures Results 2024-2025",
+      "notes": "Self-published performance data. Use in source manifest and record context, not as a policy entitlement source."
+    },
+    {
+      "source_id": "london-datastore-portal",
+      "title": "London Datastore",
+      "publisher": "Greater London Authority",
+      "url": "https://data.london.gov.uk/",
+      "source_type": "open_data_portal",
+      "jurisdiction": "Greater London",
+      "role": ["open_data_foundation"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": false,
+      "confidence": "high",
+      "verified_points": [
+        "The London Datastore is the GLA's open data-sharing portal for London.",
+        "The portal indexes datasets across London topics including housing, health, and communities."
+      ],
+      "source_locator": "Welcome to the Datastore",
+      "notes": "Portal source only. Use dataset pages for claims about specific numbers."
+    },
+    {
+      "source_id": "london-datastore-housing-in-london-2025",
+      "title": "Housing in London - The evidence base for the Mayor's Housing Strategy",
+      "publisher": "Greater London Authority",
+      "url": "https://data.london.gov.uk/dataset/housing-in-london-the-evidence-base-for-the-mayors-housing-strat-24rpx/",
+      "source_type": "open_data_dataset",
+      "jurisdiction": "Greater London",
+      "role": ["open_data_context", "housing_context"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": false,
+      "confidence": "high",
+      "verified_points": [
+        "The dataset page provides the Housing in London 2025 report and tables.",
+        "The dataset is relevant for London-wide housing stock, supply, costs, need, mobility, and decent homes context."
+      ],
+      "source_locator": "Housing in London 2025 report and tables",
+      "notes": "Use as impact/deployment evidence after downloading the tables; not used for individual policy cards."
+    },
+    {
+      "source_id": "ons-disability-england-wales-2021",
+      "title": "Disability in England and Wales, 2021",
+      "publisher": "Office for National Statistics",
+      "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/disability/datasets/disabilityinenglandandwales2021",
+      "source_type": "open_data_dataset",
+      "jurisdiction": "England and Wales",
+      "role": ["open_data_context", "impact_context"],
+      "status": "verified",
+      "verified_on": "2026-06-06",
+      "policy_claim_allowed": false,
+      "confidence": "high",
+      "verified_points": [
+        "The dataset provides Census 2021 disability estimates by long-term health problem or disability, sex, age, and deprivation.",
+        "The estimates are as at Census Day, 21 March 2021."
+      ],
+      "source_locator": "About this Dataset",
+      "notes": "This is disability context, not a confirmed borough-level hearing impairment or BSL-user dataset."
+    }
+  ],
+  "verified_for_demo": [
+    "City of London has a current damp/mould web page and versioned damp/mould policy suitable for a local RAG corpus.",
+    "The damp/mould scenario can generate source-backed cards for reporting, response windows, vulnerability triage, accessible communication, records, complaints, and temporary accommodation.",
+    "Awaab's Law tenant and landlord guidance is directly relevant to social housing damp/mould hazards in England."
+  ],
+  "needs_confirmation": [
+    "Confirm the resident's tenure and whether Awaab's Law applies to the specific appointment before presenting legal timeframes as applicable to that person.",
+    "Re-check City of London contact details, web forms, and response target wording immediately before a live demo.",
+    "Download and archive complete source PDFs/HTML under the chosen licence before production ingestion.",
+    "Confirm exact London borough hearing impairment or BSL-user prevalence tables before making borough-level deployment claims.",
+    "Have a housing/legal expert review the question prompts before using them outside the hackathon demo."
+  ],
+  "safety_notes": [
+    "This corpus does not provide legal advice.",
+    "Policy cards should be shown as source-backed prompts for advocacy and record keeping, not binding determinations.",
+    "Do not infer medical severity. The agent may ask the resident to report health impact and vulnerability details because the sources say these affect triage."
+  ]
+}

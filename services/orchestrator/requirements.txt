@@ -1,0 +1,4 @@
+fastapi>=0.136,<1
+jsonschema>=4.26,<5
+uvicorn[standard]>=0.40,<1
+websockets>=16,<17
