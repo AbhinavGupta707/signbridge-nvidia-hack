@@ -53,6 +53,7 @@ export interface AudioChunkEvent extends BaseEvent {
 
 export interface UserConfirmationEvent extends BaseEvent {
   type: "user.confirmation";
+  session_id: string;
   utterance_id: string;
   accepted: boolean;
   correction_text: string | null;

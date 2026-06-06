@@ -22,6 +22,7 @@
   },
   {
     "type": "user.confirmation",
+    "session_id": "demo-001",
     "utterance_id": "u-1",
     "accepted": true,
     "correction_text": null

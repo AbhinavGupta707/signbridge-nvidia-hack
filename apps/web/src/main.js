@@ -811,6 +811,7 @@ function confirmMeaning() {
   state.correctionOpen = false;
   sendClientEvent({
     type: "user.confirmation",
+    session_id: state.sessionId,
     utterance_id: event.utterance_id,
     accepted: true,
     correction_text: null,
@@ -839,6 +840,7 @@ function sendCorrection() {
   state.correctionOpen = false;
   sendClientEvent({
     type: "user.confirmation",
+    session_id: state.sessionId,
     utterance_id: event.utterance_id,
     accepted: false,
     correction_text: correction || null,

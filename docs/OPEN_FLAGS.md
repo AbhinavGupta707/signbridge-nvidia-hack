@@ -18,6 +18,7 @@ These are not blockers for scaffolding. They are the questions to answer before 
 - Ollama requires official install/discovery and a downloaded local model before GPU troubleshooting is useful.
 - llama.cpp requires source checkout/build artifacts and a local GGUF before CUDA/runtime tuning is useful.
 - Any offline proof path that still needs public internet is blocked until a local/on-device fallback is selected.
+- Until hardware arrives, `SIGNBRIDGE_ORCHESTRATOR_MODE=hybrid` is the canonical local integration path: source-backed advocacy is real, voice providers are activation-gated/fallback, and recognition remains synthetic.
 
 ## Data Specificity
 

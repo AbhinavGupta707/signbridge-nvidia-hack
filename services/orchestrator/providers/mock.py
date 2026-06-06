@@ -179,9 +179,11 @@ class MockRecordProvider:
             self._items[session_id].append(event)
 
     def note_confirmation(self, event: dict[str, Any], session_id: str = "demo-001") -> dict[str, Any]:
+        session_id = str(event.get("session_id") or session_id)
         self._items[session_id].append(
             {
                 "type": "user.confirmation",
+                "session_id": session_id,
                 "utterance_id": event["utterance_id"],
                 "accepted": event["accepted"],
                 "correction_text": event["correction_text"],
@@ -231,6 +233,13 @@ class MockRecordProvider:
             f"<ol>{''.join(rows)}</ol>"
             "</body></html>"
         )
+
+    def render_json(self, session_id: str) -> dict[str, Any]:
+        return {
+            "record_version": "signbridge.mock_record.v1",
+            "session_id": session_id,
+            "items": self._items.get(session_id, []),
+        }
 
 
 @dataclass

@@ -227,7 +227,7 @@
         "required": ["type"]
       },
       "then": {
-        "required": ["type", "utterance_id", "accepted", "correction_text"]
+        "required": ["type", "session_id", "utterance_id", "accepted", "correction_text"]
       }
     },
     {

@@ -2,14 +2,18 @@
 
 FastAPI and WebSocket event bus lives here.
 
-This is a mock-only integration scaffold. It creates the backend shell that other branches can target before real providers exist.
+This service supports two local modes:
+
+- `mock`: deterministic replay and placeholder providers for frontend wiring.
+- `hybrid`: synthetic recognition plus local voice provider boundaries, source-backed advocacy agents, and citation-backed record export. This is the best pre-hardware integration mode.
 
 Implemented endpoints:
 
-- `GET /health` returns orchestrator and mock component status.
+- `GET /health` returns orchestrator and component status.
 - `GET /mock/events` returns the scripted server events from `packages/contracts/examples/scripted_demo.server.events.json`.
-- `GET /mock/records/{session_id}.html` returns an in-memory mock record.
-- `WS /ws` accepts contract events and returns mock server events.
+- `GET /mock/records/{session_id}.html` returns an in-memory mock or hybrid record.
+- `GET /mock/records/{session_id}.json` returns the same record as JSON.
+- `WS /ws` accepts contract events and returns server events.
 
 ## Run
 
@@ -20,6 +24,18 @@ make dev
 ```
 
 The default server is `http://127.0.0.1:8000`.
+
+For pre-hardware integration:
+
+```bash
+make dev-hybrid
+```
+
+Or explicitly:
+
+```bash
+SIGNBRIDGE_ORCHESTRATOR_MODE=hybrid python3 -m uvicorn services.orchestrator.app:app --host 127.0.0.1 --port 8000
+```
 
 ## WebSocket Replay
 
@@ -37,9 +53,9 @@ Or send:
 
 The replay emits `system.status`, `recognition.*`, `translation.final`, `tts.audio`, `caption.*`, `policy.card`, `question.prompt`, `record.updated`, and `record.exported`.
 
-## Mock Boundaries
+## Mode Boundaries
 
-These providers are intentionally fake:
+In `mock` mode these providers are intentionally fake:
 
 - recognition: scripted constrained-vocabulary tokens
 - translation: deterministic templates
@@ -49,4 +65,11 @@ These providers are intentionally fake:
 - question prompts: scripted prompt text
 - record updates: in-memory only
 
-Do not add real vision, voice, advocacy retrieval, or frontend internals in this branch.
+In `hybrid` mode:
+
+- recognition remains synthetic until clips/hardware are available
+- translation/TTS/ASR use `services/voice` provider interfaces
+- policy/question output uses `services/advocacy` source-backed retrieval
+- record export uses the advocacy `RecordAgent`
+
+Do not make hardware availability a precondition for local development. Keep `hybrid` mode green before swapping in real DGX/ZGX providers.
