@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/signbridge/contracts/events.schema.json",
+  "title": "Signbridge Event Contract",
+  "type": "object",
+  "required": ["type"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "session.start",
+        "landmark.frame",
+        "audio.chunk",
+        "user.confirmation",
+        "record.export",
+        "system.status",
+        "recognition.partial",
+        "recognition.final",
+        "translation.final",
+        "tts.audio",
+        "caption.partial",
+        "caption.final",
+        "policy.card",
+        "question.prompt",
+        "record.updated",
+        "record.exported",
+        "demo.replay"
+      ]
+    },
+    "session_id": {"type": "string"},
+    "utterance_id": {"type": "string"},
+    "t_ms": {"type": "integer", "minimum": 0},
+    "scenario": {"type": "string"},
+    "consent_record": {"type": "boolean"},
+    "component": {"type": "string"},
+    "status": {"type": "string"},
+    "detail": {"type": ["string", "null"]},
+    "landmarks_version": {"type": "string"},
+    "points": {"type": "array"},
+    "format": {"type": "string"},
+    "sample_rate": {"type": "integer"},
+    "data_b64": {"type": "string"},
+    "accepted": {"type": "boolean"},
+    "correction_text": {"type": ["string", "null"]},
+    "tokens": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "text": {"type": "string"},
+    "speaker": {"type": "string"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "claim": {"type": "string"},
+    "source_title": {"type": "string"},
+    "source_url": {"type": "string"},
+    "quote": {"type": "string"},
+    "item_count": {"type": "integer", "minimum": 0},
+    "export_url": {"type": "string"}
+  },
+  "additionalProperties": true
+}
+
